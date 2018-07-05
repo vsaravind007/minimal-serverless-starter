@@ -18,7 +18,9 @@ Building a RESTful API service in Serverless framework is quite simple, it is su
 Below are the files you should be interested in:
 
 ``handler.js`` - This is where the API handler codes reside.
+
 ``serverless.env.yml`` - This is where you define your ENV variables
+
 ``serverless.yml`` - The main serverless definitions file where you define your API endpoints
 
 **How to Deploy?**
