@@ -1,0 +1,25 @@
+{
+  "name": "minimal-serverless-starter",
+  "version": "1.0.0",
+  "description": "A minimal starter template for a serverless API on AWS lambda",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vsaravind007/minimal-serverless-starter.git"
+  },
+  "keywords": [
+    "serverless"
+  ],
+  "author": "Aravind VS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vsaravind007/minimal-serverless-starter/issues"
+  },
+  "homepage": "https://github.com/vsaravind007/minimal-serverless-starter#readme",
+  "dependencies": {
+    "serverless-aws-alias": "^1.7.1"
+  }
+}

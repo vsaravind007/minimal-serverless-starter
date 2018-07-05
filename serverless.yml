@@ -1,0 +1,33 @@
+#Below is the name for your service
+service: minimal-serverless-starter
+
+#This is where we define which provider we are going to use for our serverless function, AWS here.
+provider:
+  name: aws
+  runtime: nodejs6.10
+  timeout: 15
+  region: us-east-1
+
+#Setup the env variables below, do not hardcode them here, use serverless.env.yml file for setting values
+  environment:
+    VARIABLE: ${file(./serverless.env.yml):${opt:stage}.VARIABLE}
+
+#Serverless plugins, we need to support multiple stages for our API, hence we are using alias plugin
+plugins:
+  - serverless-aws-alias
+
+#This is where you define your functions
+functions:
+  helloGet:
+    handler: handler.getHandler
+    events:
+      - http:
+          path: /hello
+          method: get
+
+  helloPost:
+    handler: handler.postHandler
+    events:
+      - http:
+          path: /hello
+          method: post
